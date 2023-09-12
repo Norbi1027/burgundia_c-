@@ -10,13 +10,20 @@ namespace app1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Adja meg az első számot.");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Adja mega második számot.");
-            int b = Convert.ToInt32(Console.ReadLine());
+            int a = szamotker("Adja meg az első számot: ");
+            int b = szamotker("Adja meg a második számot: ");
+            
             int c = a + b;
-            Console.WriteLine("A két szám összege:{0} ", c);
+            Console.Write("A két szám összege:{0} ", c);
             Console.ReadKey();
+        }
+
+        private static int szamotker(string szoveg)
+        {
+            int bekertszam;
+            Console.Write(szoveg);
+            bekertszam = Convert.ToInt32(Console.ReadLine());
+            return bekertszam;
         }
     }
 }
